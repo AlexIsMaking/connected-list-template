@@ -15,8 +15,18 @@
       "mode": "view"
     }
   ],
+  "preferences": [
+    {
+      "name": "apiKey",
+      "title": "API Key",
+      "description": "Key for the API",
+      "type": "password",
+      "required": false
+    }
+  ],
   "dependencies": {
-    "@raycast/api": "^1.72.1"
+    "@raycast/api": "^1.72.1",
+    "@raycast/utils": "^1.14.1"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^1.0.6",
