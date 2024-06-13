@@ -1,7 +1,3 @@
-export type Preferences = {
-  apiKey: string;
-};
-
 export type Ale = {
   id: number;
   name: string;

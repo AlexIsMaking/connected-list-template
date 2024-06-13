@@ -1,12 +1,12 @@
-import { Action, ActionPanel, getPreferenceValues, List, showToast, Toast } from "@raycast/api";
+import { Action, ActionPanel, List, showToast, Toast } from "@raycast/api";
 import { useFetch } from "@raycast/utils";
-import { Ale, Preferences } from "./types";
+
+import { apiKey } from "./utils";
+import { Ale } from "./types";
 
 export default function Command() {
-  const preferences = getPreferenceValues<Preferences>();
-
   const { isLoading, data, revalidate } = useFetch(() => "https://api.sampleapis.com/beers/ale", {
-    headers: { Authorization: `Bearer ${preferences.apiKey}` },
+    headers: { Authorization: `Bearer ${apiKey}` },
     initialData: [],
     keepPreviousData: true,
     mapResult(result: Ale[]) {
